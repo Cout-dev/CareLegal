@@ -4,41 +4,43 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import Ourteam from "./Ourteam";
+// ...existing code...
 
 function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
   return (
     <div
-    className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+    className={cn("fixed top-10 inset-x-1 max-w-3xl mx-auto z-40", className)}
     >
         <Menu setActive={setActive}>
-            <Link href={"/"}>
-            <MenuItem setActive={setActive} active={active} item="Home">
-            
-            </MenuItem>
-            </Link>
-            <MenuItem
-            setActive={setActive} active={active} item="Our Courses"
-            >
-               <div className="flex flex-col space-y-4 text-sm">
-               <HoveredLink href="/courses">All Courses</HoveredLink>
-            <HoveredLink href="/courses">
-              Basic Music Theory
-            </HoveredLink>
-            <HoveredLink href="/courses">
-              Advanced Composition
-            </HoveredLink>
-            <HoveredLink href="/courses">Songwriting</HoveredLink>
-            <HoveredLink href="/courses">
-              Music Production
-            </HoveredLink>
-               </div>
-            </MenuItem>
-            <Link href={"/contact"}>
-            <MenuItem setActive={setActive} active={active} item="Contact Us">
-            
-            </MenuItem>
-            </Link>
+            {/* Flex wrapper adds spacing between items; adjust gap-6 as needed */}
+            <div className="flex items-center gap-9">
+                <Link href={"/"}>
+                <MenuItem setActive={setActive} active={active} item="Home">
+                </MenuItem>
+                </Link>
+
+                <Link href={"/our-team"}>
+                <MenuItem setActive={setActive} active={active} item="Our Team" />
+                </Link>
+
+
+                <Link href={"/notedjudgement"}>
+                <MenuItem setActive={setActive} active={active} item="Noted Judgement">
+                </MenuItem>
+                </Link>
+
+                <Link href="/newsreport">
+                <MenuItem setActive={setActive} active={active} item="News Report" />
+                </Link>
+
+                
+                <Link href={"/contact"}>
+                <MenuItem setActive={setActive} active={active} item="Contact Us">
+                </MenuItem>
+                </Link>
+            </div>
         </Menu>
     </div>
   )
