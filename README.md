@@ -1,6 +1,6 @@
 # CareLegal
 
-A frontend web application built with Next.js + TypeScript and Tailwind CSS. This repository contains a Next 14 app scaffold with shadcn-style component configuration and Tailwind customizations. (Note: package.json currently lists the project name as `musicnextjs` — consider updating to `carelegal`.)
+A frontend web application built with Next.js + TypeScript and Tailwind CSS. This repository contains a Next 14 app scaffold with shadcn and accertinity-style component configuration and Tailwind customizations. (Note: package.json currently lists the project name as `musicnextjs` — consider updating to `carelegal`.)
 
 
 
@@ -45,7 +45,7 @@ This repository contains the front-end source under `src/` and static assets und
 - TailwindCSS ^3.3.0
 - PostCSS + Autoprefixer
 - ESLint (extends `next/core-web-vitals`)
-- shadcn UI config (components.json)
+- shadcn & accertinity UI config (components.json)
 - Framer Motion, lucide-react icons, and other UI helpers
 
 Recommended Node version: Node 18+ (use a modern LTS for Next.js 14)
@@ -248,3 +248,4 @@ Code style: rely on ESLint + Prettier (Prettier not included — consider adding
 If you'd like, I can:
 - produce a ready-to-commit README based on this content (and push it to a branch)
 - or expand sections (API reference, component map, developer onboarding checklist)
+
